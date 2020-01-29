@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import pip
+import pkg_resources
 from subprocess import call
-from pip._internal.utils.misc import get_installed_distributions
 
-for dist in get_installed_distributions():
-    call("pip install --upgrade " + dist.project_name, shell=True)
+packages = [dist.project_name for dist in pkg_resources.working_set]
+call("pip3 install --upgrade " + ' '.join(packages), shell=True)
