@@ -8,7 +8,5 @@ time.sleep(10)
 i=0
 for i in range(0,10):
 	i+=1
-	pyautogui.keyDown('right')
-	time.sleep(0.3)
-	pyautogui.keyUp('right')
-	time.sleep(2)
+	pyautogui.press('right')
+	time.sleep(1)
