@@ -32,5 +32,5 @@ for i in delete:
 			lst.remove(i)	
 lst=list(set(lst))
 print(lst)
-res=sorted(lst,key=lambda x:len(x))
+res=sorted(lst,key=lambda x:len(x),reverse=True)
 print(res)
